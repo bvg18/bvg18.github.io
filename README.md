@@ -1,6 +1,6 @@
 # Mercurial, la alternativa a Git.
 
-Metodologías Ágiles de Desarrollo de Software, Universidad de Alicante, curso 2020/21.
+Metodologías Ágiles de Desarrollo de Software, Universidad de Alicante, curso 2020/21. <br>
 Brais Valencia García
 
 ## Mercurial
@@ -21,6 +21,8 @@ El lenguaje de programación que predomina en el proyecto es [Python](https://ww
 
 ## Instalación
 Mercurial fue escrito originalmente para funcionar sobre GNU/Linux. Pero ha sido adaptado para poderse utilizar en Windows, Mac OS X y la mayoría de sistemas tipo Unix.
+Comenzaremos la instalación del sistema de control de versiones descargandolo. Dependiendo del sistema operativo que usemos, lo podremos hacer mediante linea
+de comandos o ejecutable.
 > [Mercurial para Windows](https://www.mercurial-scm.org/wiki/Download#Windows)
 > [Mercurial para Mac OS X](https://www.mercurial-scm.org/downloads)
 > [Mercurial para Linux](https://www.mercurial-scm.org/wiki/Download#Linux_.28.deb.29)
@@ -33,7 +35,7 @@ en el subdirectorio ".hg". <br>
 La configuración general para cada usuario se guarda en el archivo ".hgrc" y la configuración local para cada proyecto se guarda en
 "<repo>/.hg/hgrc". <br>
   
-Tendremos que comprobaremos que existe el archivo ".hgrc":
+Tendremos que comprobar si existe el archivo ".hgrc":
 - En Windows ``` $ ls .hgrc ```.
 - En Mac y Linux ``` $ ls ~/.hgrc```.
 
@@ -41,7 +43,7 @@ Si no existe el archivo lo ponemos crear con ``` $ touch ~/.hgrc ```.
 
 Por último, modificaremos el archivo ``` .hgrc ``` añadiendo un nombre de usuario y un correo electrónico. 
 > [ui]
-> # Name data to appear in commits
+> \# Name data to appear in commits
 > username = Emma Paris <eparis@atlassian.com>
 
 Guardamos el archivo y lo cerramos. Estaremos listos para empezar a usar Mercurial.
@@ -49,6 +51,6 @@ Guardamos el archivo y lo cerramos. Estaremos listos para empezar a usar Mercuri
 ## Comandos básicos
 ## Nuestro proyecto con mercurial
 ## Subir a Github
-## Alternativas Mg a Github
+## Alternativas Hg a Github
 ## Conclusión
 
