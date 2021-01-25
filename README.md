@@ -46,18 +46,21 @@ Tendremos que comprobar si existe el archivo ".hgrc":
 Si no existe el archivo lo ponemos crear con ``` $ touch ~/.hgrc ```.
 
 Por último, modificaremos el archivo ``` .hgrc ``` añadiendo un nombre de usuario y un correo electrónico. 
-> [ui] <br>
-> \# Nombre que aparecerá en el commit <br>
-> username = Emma Paris <eparis@atlassian.com> <br>
+```
+[ui] <br>
+# Nombre que aparecerá en el commit <br>
+username = Emma Paris <eparis@atlassian.com> <br>
+```
 
 Guardamos el archivo y lo cerramos. Estaremos listos para empezar a usar Mercurial.
 
 ## Comandos básicos
 Vamos ahora a ver las instrucciones básicas de Mercurial. Así pues, la directiva de Mercurial es ```hg``` por el simbolo quimico antes mencionado.
 **Por tanto, podemos crear un repositorio local:**
-> hg init (directorio del proyecto) <br>
-> cd (directorio del proyecto) <br>
-<br>
+```
+hg init (directorio del proyecto)
+cd (directorio del proyecto)
+```
 
 **Añadiremos los archivos iniciales del proyecto y una vez hecho esto ejecutamos el siguiente comando:**
 > hg add (ficheros nuevos) <br>
