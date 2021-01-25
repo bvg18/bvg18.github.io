@@ -61,9 +61,14 @@ Vamos ahora a ver las instrucciones básicas de Mercurial. Así pues, la directi
 
 **Añadiremos los archivos iniciales del proyecto y una vez hecho esto ejecutamos el siguiente comando:**
 > hg add (ficheros nuevos) <br>
+O también podemos añadir todos los ficheros nuevos a la vez con:
+> hg add .
 **Una vez añadido los ficheros, podemos hacer el primer commit de nuestro repositorio:** <br>
 Con el parametro -m podremos añadir un comentario al commit. Es una buena práctica siempre añadir uno o dos de estos en cada commit. <br>
 > hg commit -m "Primer commit" <br>
+<br>
+**Podemos ver el estado de nuestro repositorio con el siguiente comando:** <br>
+> hg status
 <br>
 
 **Mercurial admite el uso de [extensiones](https://www.mercurial-scm.org/wiki/UsingExtensions) para añadir diversas funcionalidades o mejoras:** <br>
@@ -78,7 +83,9 @@ Podemos ver las extensiones disponibles con el siguinte commando
 > \# Podemos especificar la ruta concretan <br>
 > [extensions] <br>
 > myfeature = ~/.hgext/myfeature.pyb <br>
+
 <br>
+
 > También se pueden **deshabilitar** de una en una: <br>
 > [extensions] <br>
 > \# disabling extension bar residing in /path/to/extension/bar.py <br>
@@ -86,6 +93,26 @@ Podemos ver las extensiones disponibles con el siguinte commando
 > \# ditto, but no path was supplied for extension baz <br>
 > baz = ! <br>
 <br>
+
+**Para dar de alta un nuevo repositorio en un proyecto, edita su ```\<proyecto>/.hg/hgrc``` y añade una nueva entrada en
+paths así:**
+```
+[paths]
+default = http://www.hgrepos.net/r1   -> Es especial, se usa como valor por defecto cuando no especificamos la URL.
+default-push = ssh://mads@hgrepos.net/r1  ->  Idem pero cuando hacemos un push.
+...
+alias1 = URL1
+alias2 = URL2
+```
+
+**Los conflictos se marcan igual que en otros scv:**
+```
+<<<<<<< /tmp/conflict/crab.cpp
+void function() {
+=======
+int function() {
+>>>>>>> /tmp/crab.cpp
+```
 
 falta por meter: añadir una url de repositorio y cosas como crear ramas y push
 
