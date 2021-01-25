@@ -1,24 +1,27 @@
 # Mercurial, la alternativa a Git.
 
 Metodologías Ágiles de Desarrollo de Software, Universidad de Alicante, curso 2020/21. <br>
-Brais Valencia García
+Página web creada por Brais Valencia García. Github Developer Student Pack y Namecheap.
 
 ## Mercurial
 El uso de git es casi unanime en el desarrollo de software, pero existen otras opciones igualmente validas como Baazar o Mercurial.
-Es el caso de este ultimo sistema de control de versiones del que hablaremos en esta pagina web. Mas concretamente su uso en relación 
-a la práctica 4 (grupal) de la asignatura Metodologias de desarrollo de software de la universidad de alicante. <br>
-Pongamonos manos a la obra y aprendamos un poco sobre el proyecto Mercurial.
+Es el caso de este último sistema de control de versiones del que hablaremos en esta página web. Más concretamente su uso en relación 
+a la práctica 4, realizada de forma grupal, de la asignatura Metodologías de Desarrollo de Doftware de la Universidad de Alicante. <br>
+Pongámonos manos a la obra, aprendamos sobre el proyecto Mercurial y su potencial.
 
 ## Historia
 [Mercurial](https://www.mercurial-scm.org/) es un sistema de control de versiones distribuído. Su nombre le viene del termino 
 [Hidrargiro](https://es.wikipedia.org/wiki/Mercurio_(elemento)). Termino usado en la literatura antigua para designar al 
-Mercurio, elemento quimico con el símbolo Hg. <br>
+Mercurio, elemento quimico con el símbolo Hg y número atómico 80. <br>
 El creador y desarrollador principal de Mercurial es Matt Mackall, que hizo pública la existencia de Mercurial el 19 de abril de 2005.
-Para cubrir la necesidad de un sistema de control de versiones de software libre que sustituyera a BitKeeper.
-El código fuente de Mercurial se encuentra disponible bajo los términos de la licencia GNU GPL versión 2. <br>
+Con el objetivo de cubrir la necesidad existente de un sistema de control de versiones de software libre que sustituyera a la versión gratuita de BitKeeper.
+Ya que esta iba a ser retirada por sus creadores Bitmover. Se había estado usando BitKeeper debido a los requisitos de control de versiones del proyecto del núcleo Linux. Mackall decidió escribir Mercurial como sustituto para usarlo con el núcleo Linux. El proyecto comenzó aproximadamente al mismo tiempo que otro denominado git, iniciado por el propio Linus Torvalds con objetivos similares. El proyecto Linux decidió usar Git en lugar de Mercurial, y por ello el proyecto de Mackall se quedaría en un segundo plano.
+Siendo Git dueño y señor de los sistemas de control de versiones hasta la fecha, enero de 2021. <br>
 
-El lenguaje de programación que predomina en el proyecto es [Python](https://www.python.org/) pero tambien hay partes escritas en C.<br>
-# Añadir más aquí, hay un monton de información
+Por otro lado, el proyecto Mercurial estaba desarrolado usando el lenguaje de programación [Python](https://www.python.org/) como lenguaje principal. Pero también 
+hay partes, como la comparacion binaria de [diff](https://es.wikipedia.org/wiki/Diff) desarrolladas en C.<br>
+Las principales metas del desarrollo de Mercurial incluyen un gran rendimiento y escalabilidad; desarrollo completamente distribuido, sin necesidad de un servidor; gestión robusta de archivos tanto de texto como binarios; y capacidades avanzadas de ramificación e integración, todo ello manteniendo sencillez conceptual.
+El código fuente de Mercurial se encuentra disponible bajo los términos de la licencia GNU GPL versión 2. <br>
 
 ## Instalación
 Mercurial fue escrito originalmente para funcionar sobre GNU/Linux. Pero ha sido adaptado para poderse utilizar en Windows, Mac OS X y la mayoría de sistemas tipo Unix.
@@ -51,32 +54,32 @@ Guardamos el archivo y lo cerramos. Estaremos listos para empezar a usar Mercuri
 
 ## Comandos básicos
 Vamos ahora a ver las instrucciones básicas de Mercurial. Así pues, la directiva de Mercurial es ```hg``` por el simbolo quimico antes mencionado.
-Por tanto, podemos crear un repositorio local:
+**Por tanto, podemos crear un repositorio local:**
 > hg init (directorio del proyecto) <br>
 > cd (directorio del proyecto) <br>
 <br>
 
-Añadiremos los archivos iniciales del proyecto y una vez hecho esto ejecutamos el siguiente comando:
+**Añadiremos los archivos iniciales del proyecto y una vez hecho esto ejecutamos el siguiente comando:**
 > hg add (ficheros nuevos) <br>
-Una vez añadido los ficheros, podemos hacer el primer commit de nuestro repositorio: <br>
+**Una vez añadido los ficheros, podemos hacer el primer commit de nuestro repositorio:** <br>
 Con el parametro -m podremos añadir un comentario al commit. Es una buena práctica siempre añadir uno o dos de estos en cada commit. <br>
 > hg commit -m "Primer commit" <br>
 <br>
 
-Mercurial admite el uso de [extensiones](https://www.mercurial-scm.org/wiki/UsingExtensions) para añadir diversas funcionalidades o mejoras: <br>
+**Mercurial admite el uso de [extensiones](https://www.mercurial-scm.org/wiki/UsingExtensions) para añadir diversas funcionalidades o mejoras:** <br>
 Podemos ver las extensiones disponibles con el siguinte commando
 > hg help extensions <br>
-Ádemas, podemos ver información de una extensión en concreto de la siguiente forma: <br>
+**Ádemas, podemos ver información de una extensión en concreto de la siguiente forma:** <br>
 > hg help nombre-extension <br>
-Por último, podemos habilitar y deshabilitar las extensiones: <br>
-> Las extensiones se deben habilitar, p.e. en .hg/hgrc:<br>
+**Por último, podemos habilitar y deshabilitar las extensiones:** <br>
+> Las extensiones se deben **habilitar**, p.e. en .hg/hgrc:<br>
 > [extensions] <br>
 > foo = <br>
 > \# Podemos especificar la ruta concretan <br>
 > [extensions] <br>
 > myfeature = ~/.hgext/myfeature.pyb <br>
 <br>
-> También se pueden deshabilitar de una en una: <br>
+> También se pueden **deshabilitar** de una en una: <br>
 > [extensions] <br>
 > \# disabling extension bar residing in /path/to/extension/bar.py <br>
 > bar = !/path/to/extension/bar.py <br>
