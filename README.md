@@ -63,16 +63,37 @@ cd (directorio del proyecto)
 ```
 
 **Añadiremos los archivos iniciales del proyecto y una vez hecho esto ejecutamos el siguiente comando:**
+```
 > hg add (ficheros nuevos) <br>
 O también podemos añadir todos los ficheros nuevos a la vez con:
 > hg add .
-**Una vez añadido los ficheros, podemos hacer el primer commit de nuestro repositorio:** <br>
+```
+**Una vez añadido los ficheros, podemos hacer el primer commit de nuestro repositorio:** 
 Con el parametro -m podremos añadir un comentario al commit. Es una buena práctica siempre añadir uno o dos de estos en cada commit. <br>
+```
 > hg commit -m "Primer commit" <br>
-<br>
+```
 **Podemos ver el estado de nuestro repositorio con el siguiente comando:** <br>
+```
 > hg status
-<br>
+```
+**El uso de ramas es algo fundamental dentro de los sistemas de control de versiones.**
+Por ello, hg dispone al igual que git de una serie de deirectivas para hacernos la vida más fácil a la hora de porgramas. Tanto de forma individual como en grupo.
+**Rama por defecto en Mercurial**
+Default es el nombre que tiene la rama que crea Mercurial al crear un proyecto desde cero.
+**Como podemos crear nuestras propias ramas:**
+```
+hg branch nombre-de-la-rama
+```
+**Una vez creadas ramas para trabajar, podemos ver todas ellas en una lista de esta forma:**
+```
+hg branches
+```
+**Ádemas, si necesaitamos cambiar entre ramas podemos hacerlo con la directiva de hg:**
+```
+hg update nombre-de-la-rama
+```
+
 
 **Mercurial admite el uso de [extensiones](https://www.mercurial-scm.org/wiki/UsingExtensions) para añadir diversas funcionalidades o mejoras:** <br>
 Podemos ver las extensiones disponibles con el siguinte commando
@@ -95,7 +116,9 @@ Podemos ver las extensiones disponibles con el siguinte commando
 > bar = !/path/to/extension/bar.py <br>
 > \# ditto, but no path was supplied for extension baz <br>
 > baz = ! <br>
-<br>
+
+**Existen cantidad de extensiones desarrolladas por terceros que podemos incluir en nuestro proyecto Mercurial**
+En este [enlace](https://www.mercurial-scm.org/wiki/UsingExtensions#Extensions_provided_by_others) tenemos una lista de algunas de ellas.
 
 **Para dar de alta un nuevo repositorio en un proyecto, edita su ```\<proyecto>/.hg/hgrc``` y añade una nueva entrada en
 paths así:**
@@ -117,10 +140,39 @@ int function() {
 >>>>>>> /tmp/crab.cpp
 ```
 
-falta por meter: añadir una url de repositorio y cosas como crear ramas y push
+explicar y añadir bisect
+falta push
+añadir enlaces 
 
 ## Nuestro proyecto con mercurial
-## Subir a Github ?
-## Alternativas Hg a Github ?
-## Conclusión
+Vistos algunos de los comandos de los que disponemos al usar el proyecto Mercurial, vamos a ver como podemos aplicarlo a la práctica 4 de la asignatura.
+Podemos realizar varias configuraciones distintas perfectamente validas para el trabajado y el desarrollo diario.
+La forma de trabajar que vamos a ver aquí es una totalmente distinta a la usada en la asignatura, ya aue no usaremos ni Git ni GitHub. 
+Al fin y al cabo es el objetivo de esta página web. 
 
+¿Y cómo vamos a funcionar? <br>
+Como hemos estado explicando, vamos a usar Mercurial como sistema de control de versiones. Pero de momento solo tenemos un proyecto local. 
+meter algo de codigo donde crea un priyecto y le añade los archivos de la practica 4
+
+¿Y cómo guardamos de forma remota nuestro repositorio?
+En la práctica hemos usado GitHub como servidor, en donde todos los componentes del grupo subiamos nuestra copia e ibamos guardando lo desarrollado.
+Pero GitHub no es único, hay cantidad de servicios que nos permiten trabajar de forma parecida. 
+Portales para subir código creados especificamente para Mercurial y para trabajar de forma sencilla con hg. <br>
+La propia página oficial de mercurial nos proporciona una lista de ellas. [Mercurial Hosting](https://www.mercurial-scm.org/wiki/MercurialHosting). <br>
+Aquí vamos a ver [Heptapod](https://about.heptapod.host/). Necesitamos crearnos una cuenta en Clever Cloud. En este caso, podemos acceder usando nuestra cuenta 
+GitHub y darle permisos o bien crearnos una y no depender del sistema de control de versiones. [Enlace](https://api.clever-cloud.com/v2/sessions/signup). 
+Autorizamos a la aplicación y aceptamos los terminos y concidiciones. <br>
+Una vez hemos creado nuestra cuenta, volvemos [aquí](https://heptapod.host/users/sign_in) y conectamos usando nuestra cuenta de GitHub. Marcaremos las dos casillas que aparecen.
+<br>
+Dentro de la página principal de Heptapod, podemos crear un nuevo proyecto o ver los proyectos de otras personas. 
+Para mayor seguridad, podemos añadir una configuración ssh. Añadiendo un nivel de seguridad extra vinculando mediante una contraseña ssh tu maquina de trabajo habitual 
+con la página web Heptapod. Se configura de forma sencilla siguendo los pasos que indica la propia página web. <br>
+
+Tal y como tenemos en GitHub, Heptapod dispone de la creación y gestión de Issues; o de la creación y gestión de Pull Request entre otras funcionalidades.
+Dentro de la aplicación, disponemos también de una herramienta [ToDoList](https://heptapod.host/dashboard/todos) muy parecida a la idea original 
+de la práctica 4 salvando las distancias. <br>
+
+
+
+## comentar hggit 
+## Conclusión
