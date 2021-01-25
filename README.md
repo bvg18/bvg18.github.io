@@ -24,9 +24,9 @@ El lenguaje de programación que predomina en el proyecto es [Python](https://ww
 Mercurial fue escrito originalmente para funcionar sobre GNU/Linux. Pero ha sido adaptado para poderse utilizar en Windows, Mac OS X y la mayoría de sistemas tipo Unix.
 Comenzaremos la instalación del sistema de control de versiones descargandolo. Dependiendo del sistema operativo que usemos, lo podremos hacer mediante linea
 de comandos o ejecutable.
-> [Mercurial para Windows](https://www.mercurial-scm.org/wiki/Download#Windows)
-> [Mercurial para Mac OS X](https://www.mercurial-scm.org/downloads)
-> [Mercurial para Linux](https://www.mercurial-scm.org/wiki/Download#Linux_.28.deb.29)
+> [Mercurial para Windows](https://www.mercurial-scm.org/wiki/Download#Windows) <br>
+> [Mercurial para Mac OS X](https://www.mercurial-scm.org/downloads) <br>
+> [Mercurial para Linux](https://www.mercurial-scm.org/wiki/Download#Linux_.28.deb.29) <br>
 
 Para más detalles sobre la instalación o algun problema que pudiera surgir tenemos la [wiki de Mercurial](https://www.mercurial-scm.org/wiki/Download).
 
@@ -43,45 +43,45 @@ Tendremos que comprobar si existe el archivo ".hgrc":
 Si no existe el archivo lo ponemos crear con ``` $ touch ~/.hgrc ```.
 
 Por último, modificaremos el archivo ``` .hgrc ``` añadiendo un nombre de usuario y un correo electrónico. 
-> [ui]
-> \# Nombre que aparecerá en el commit
-> username = Emma Paris <eparis@atlassian.com>
+> [ui] <br>
+> \# Nombre que aparecerá en el commit <br>
+> username = Emma Paris <eparis@atlassian.com> <br>
 
 Guardamos el archivo y lo cerramos. Estaremos listos para empezar a usar Mercurial.
 
 ## Comandos básicos
 Vamos ahora a ver las instrucciones básicas de Mercurial. Así pues, la directiva de Mercurial es ```hg``` por el simbolo quimico antes mencionado.
 Por tanto, podemos crear un repositorio local:
-> hg init (directorio del proyecto)
-> cd (directorio del proyecto)
+> hg init (directorio del proyecto) <br>
+> cd (directorio del proyecto) <br>
 <br>
 
 Añadiremos los archivos iniciales del proyecto y una vez hecho esto ejecutamos el siguiente comando:
-> hg add (ficheros nuevos)
+> hg add (ficheros nuevos) <br>
 Una vez añadido los ficheros, podemos hacer el primer commit de nuestro repositorio: <br>
-Con el parametro -m podremos añadir un comentario al commit. Es una buena práctica siempre añadir uno o dos de estos en cada commit.
-> hg commit -m "Primer commit"
+Con el parametro -m podremos añadir un comentario al commit. Es una buena práctica siempre añadir uno o dos de estos en cada commit. <br>
+> hg commit -m "Primer commit" <br>
 <br>
 
 Mercurial admite el uso de [extensiones](https://www.mercurial-scm.org/wiki/UsingExtensions) para añadir diversas funcionalidades o mejoras: <br>
 Podemos ver las extensiones disponibles con el siguinte commando
-> hg help extensions
-Ádemas, podemos ver información de una extensión en concreto de la siguiente forma:
-> hg help nombre-extension
-Por último, podemos habilitar y deshabilitar las extensiones:
-> Las extensiones se deben habilitar, p.e. en .hg/hgrc:
-> [extensions]
-> foo =
-> \# Podemos especificar la ruta concreta
-> [extensions]
-> myfeature = ~/.hgext/myfeature.py
+> hg help extensions <br>
+Ádemas, podemos ver información de una extensión en concreto de la siguiente forma: <br>
+> hg help nombre-extension <br>
+Por último, podemos habilitar y deshabilitar las extensiones: <br>
+> Las extensiones se deben habilitar, p.e. en .hg/hgrc:<br>
+> [extensions] <br>
+> foo = <br>
+> \# Podemos especificar la ruta concretan <br>
+> [extensions] <br>
+> myfeature = ~/.hgext/myfeature.pyb <br>
 <br>
-> También se pueden deshabilitar de una en una:
-> [extensions]
-> \# disabling extension bar residing in /path/to/extension/bar.py
-> bar = !/path/to/extension/bar.py
-> \# ditto, but no path was supplied for extension baz
-> baz = !
+> También se pueden deshabilitar de una en una: <br>
+> [extensions] <br>
+> \# disabling extension bar residing in /path/to/extension/bar.py <br>
+> bar = !/path/to/extension/bar.py <br>
+> \# ditto, but no path was supplied for extension baz <br>
+> baz = ! <br>
 <br>
 
 falta por meter: añadir una url de repositorio y cosas como crear ramas y push
