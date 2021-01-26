@@ -48,10 +48,9 @@ Si no existe el archivo lo ponemos crear con ``` $ touch ~/.hgrc ```.
 Por último, modificaremos el archivo ``` .hgrc ``` añadiendo un nombre de usuario y un correo electrónico. 
 ```
 [ui] <br>
-# Nombre que aparecerá en el commit <br>
-username = Emma Paris <eparis@atlassian.com> <br>
+# Nombre que aparecerá en el commit 
+username = Emma Paris <eparis@atlassian.com> 
 ```
-
 Guardamos el archivo y lo cerramos. Estaremos listos para empezar a usar Mercurial.
 
 ## Comandos básicos
@@ -64,18 +63,18 @@ cd (directorio del proyecto)
 
 **Añadiremos los archivos iniciales del proyecto y una vez hecho esto ejecutamos el siguiente comando:**
 ```
-> hg add (ficheros nuevos) <br>
+hg add (ficheros nuevos) 
 O también podemos añadir todos los ficheros nuevos a la vez con:
-> hg add .
+hg add .
 ```
 **Una vez añadido los ficheros, podemos hacer el primer commit de nuestro repositorio:** 
 Con el parametro -m podremos añadir un comentario al commit. Es una buena práctica siempre añadir uno o dos de estos en cada commit. <br>
 ```
-> hg commit -m "Primer commit" <br>
+hg commit -m "Primer commit"
 ```
 **Podemos ver el estado de nuestro repositorio con el siguiente comando:** <br>
 ```
-> hg status
+hg status
 ```
 **El uso de ramas es algo fundamental dentro de los sistemas de control de versiones.**
 Por ello, hg dispone al igual que git de una serie de deirectivas para hacernos la vida más fácil a la hora de porgramas. Tanto de forma individual como en grupo.
@@ -96,27 +95,32 @@ hg update nombre-de-la-rama
 
 
 **Mercurial admite el uso de [extensiones](https://www.mercurial-scm.org/wiki/UsingExtensions) para añadir diversas funcionalidades o mejoras:** <br>
-Podemos ver las extensiones disponibles con el siguinte commando
-> hg help extensions <br>
+Podemos ver las extensiones disponibles con el siguinte commando:
+```
+hg help extensions
+```
 **Ádemas, podemos ver información de una extensión en concreto de la siguiente forma:** <br>
-> hg help nombre-extension <br>
+```
+hg help nombre-extension
+```
 **Por último, podemos habilitar y deshabilitar las extensiones:** <br>
-> Las extensiones se deben **habilitar**, p.e. en .hg/hgrc:<br>
-> [extensions] <br>
-> foo = <br>
-> \# Podemos especificar la ruta concretan <br>
-> [extensions] <br>
-> myfeature = ~/.hgext/myfeature.pyb <br>
+```
+Las extensiones se deben **habilitar**, p.e. en .hg/hgrc:
+[extensions] 
+foo =
+# Podemos especificar la ruta concretan 
+[extensions] 
+myfeature = ~/.hgext/myfeature.pyb 
+```
 
-<br>
-
-> También se pueden **deshabilitar** de una en una: <br>
-> [extensions] <br>
-> \# disabling extension bar residing in /path/to/extension/bar.py <br>
-> bar = !/path/to/extension/bar.py <br>
-> \# ditto, but no path was supplied for extension baz <br>
-> baz = ! <br>
-
+```
+También se pueden **deshabilitar** de una en una: 
+[extensions] 
+# disabling extension bar residing in /path/to/extension/bar.py 
+bar = !/path/to/extension/bar.py 
+# ditto, but no path was supplied for extension baz
+baz = ! 
+```
 **Existen cantidad de extensiones desarrolladas por terceros que podemos incluir en nuestro proyecto Mercurial**
 En este [enlace](https://www.mercurial-scm.org/wiki/UsingExtensions#Extensions_provided_by_others) tenemos una lista de algunas de ellas.
 
@@ -165,13 +169,26 @@ Autorizamos a la aplicación y aceptamos los terminos y concidiciones. <br>
 Una vez hemos creado nuestra cuenta, volvemos [aquí](https://heptapod.host/users/sign_in) y conectamos usando nuestra cuenta de GitHub. Marcaremos las dos casillas que aparecen.
 <br>
 Dentro de la página principal de Heptapod, podemos crear un nuevo proyecto o ver los proyectos de otras personas. 
-Para mayor seguridad, podemos añadir una configuración ssh. Añadiendo un nivel de seguridad extra vinculando mediante una contraseña ssh tu maquina de trabajo habitual 
+Para mayor seguridad, podemos añadir una configuración ssh. Añadiendo un nivel de seguridad extra vinculando mediante una contraseña ssh tu máquina de trabajo habitual 
 con la página web Heptapod. Se configura de forma sencilla siguendo los pasos que indica la propia página web. <br>
 
 Tal y como tenemos en GitHub, Heptapod dispone de la creación y gestión de Issues; o de la creación y gestión de Pull Request entre otras funcionalidades.
 Dentro de la aplicación, disponemos también de una herramienta [ToDoList](https://heptapod.host/dashboard/todos) muy parecida a la idea original 
 de la práctica 4 salvando las distancias. <br>
 
+Crearemos un nuevo proyecto personal. Tenemos tres opciones a escoger: crear un proyecto en blanco, ideal para empezar un proyecto vacío; crear un proyecto usando 
+una plantilla con ficheros iniciales ya creados, ideal para guardar una estructura dada por un lenguaje de porgramacion en concreto. La última y la que nos interesa en este caso es poder importar tus repositorios directamente de GitHub o algunos de los sistemas de control de versiones más importantes.  <br>
+Escogemos esta última opción, y le damos click a GitHub. Por seguridad necesitamos escribir un token personal que nos proporciona GitHub para este tipo de trámites. Podemos obtener el token desde la página de GitHub de esta sencilla [forma](https://docs.github.com/es/github/authenticating-to-github/creating-a-personal-access-token). Una vez obtenemos el toquen, volvemos a la página de Heptapod en la que estabamos y autenticamos usando el token mencionado. <br>
+Se nos listaran todos los repositorios disponibles, en nuestro caso escogemos el repositorio "mads-ua-20-21/todolist-final-equipo-08" y le damos a importar.
+Puede ser que el nombre del nuevo repositorio en Heptapod no sea válido, deberemos cambiarlo por otro. <br>
+
+Una vez creado el repositorio, podemos irnos a linea de comandos y escribir:
+```
+hg clone https://foss.heptapod.net/[nombre-de-usuario]/[nombre-del-repositorio]
+```
+
+Podemos comenzar a desarrollar trabajando con diferentes ramas como hemos visto antes. <br>
+Mencionar que Heptapod, nos permite también crear grupos de trabajo como los vistos y usados en GitHub. De esta forma el repositorio se compartirá entre los miembros de dicho grupo. 
 
 
 ## comentar hggit 
