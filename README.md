@@ -188,8 +188,9 @@ hg clone https://foss.heptapod.net/[nombre-de-usuario]/[nombre-del-repositorio]
 ```
 
 Podemos comenzar a desarrollar trabajando con diferentes ramas como hemos visto antes. <br>
-Mencionar que Heptapod, nos permite también crear grupos de trabajo como los vistos y usados en GitHub. De esta forma el repositorio se compartirá entre los miembros de dicho grupo. 
+Mencionar que Heptapod, nos permite también crear grupos de trabajo como los vistos y usados en GitHub. De esta forma el repositorio se compartirá entre los miembros de dicho grupo. <br>
 
+Cabe destacar, que después de haber probado las diferentes formas de crear un repositorio en Heptapod, mi recomendación es la de crear un proyecto vacío y depués añadir los ficheros necesarios uno mismo. Ya que nos evitamos cantidad de permisos y burocracia entre las distintas plataformas. Ádemas, gozaremos de un control total sobre nuestro repositorio. Al contrario de hacerlo de la forma fácil y automatica. Buena para principiantes en el desarrollo de código o personas que no quieran entrar en detalles. <br>
 
 ## comentar hggit 
 ## Conclusión
