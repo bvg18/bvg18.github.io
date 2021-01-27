@@ -34,11 +34,11 @@ Para más detalles sobre la instalación o algún problema que pudiera surgir te
 
 ## Configuración
 Toda la información relativa al control de versiones de un proyecto se guarda en el directorio raíz del proyecto, concretamente
-en el subdirectorio ".hg". <br>
-La configuración general para cada usuario se guarda en el archivo ".hgrc" y la configuración local para cada proyecto se guarda en
-"<repo>/.hg/hgrc". <br>
+en el subdirectorio ```.hg```. <br>
+La configuración general para cada usuario se guarda en el archivo ```.hgrc``` y la configuración local para cada proyecto se guarda en
+```<repo>/.hg/hgrc```. <br>
   
-Tendremos que comprobar si existe el archivo ".hgrc":
+Tendremos que comprobar si existe el archivo ```.hgrc```:
 - En Windows ``` $ ls .hgrc ```.
 - En Mac y Linux ``` $ ls ~/.hgrc```.
 
@@ -187,14 +187,15 @@ Podemos realizar varias configuraciones distintas perfectamente válidas para el
 La forma de trabajar que vamos a ver aquí es una totalmente distinta a la usada en la asignatura, ya aue no usaremos ni Git ni GitHub. <br>
 Al fin y al cabo es el objetivo de esta página web. <br>
 
-¿Y cómo vamos a funcionar? <br>
+**¿Y cómo vamos a funcionar?** <br>
 Como hemos estado explicando, vamos a usar Mercurial como sistema de control de versiones. Pero de momento solo tenemos un proyecto local. <br>
 meter algo de codigo donde crea un priyecto y le añade los archivos de la practica cuatro. <br>
 
-¿Y cómo guardamos de forma remota nuestro repositorio?
+**¿Y cómo guardamos de forma remota nuestro repositorio?** <br>
 En la práctica hemos usado GitHub como servidor, en donde todos los componentes del grupo subiamos nuestra copia e ibamos guardando lo desarrollado.
 Pero GitHub no es único, hay cantidad de servicios que nos permiten trabajar de forma parecida. 
 Portales para subir código creados especificamente para Mercurial y para trabajar de forma sencilla con hg. <br>
+
 La propia página oficial de mercurial nos proporciona una lista de ellas. [Mercurial Hosting](https://www.mercurial-scm.org/wiki/MercurialHosting). <br>
 Aquí vamos a ver [Heptapod](https://about.heptapod.host/). Necesitamos crearnos una cuenta en Clever Cloud. En este caso, podemos acceder usando nuestra cuenta 
 GitHub y darle permisos o bien crearnos una y no depender del sistema de control de versiones. [Enlace](https://api.clever-cloud.com/v2/sessions/signup). 
@@ -230,8 +231,8 @@ En el uso diario, existen pocas diferencia entre estos servidores de código rem
 **Extra:**
 Cabe mencionar que existen otras formas de usar Mercurial en local y GitHub en remoto. Existen herramientas como [TortoiseHG](https://tortoisehg.bitbucket.io/) o extensiones del propio Mercurial como [hg-git](https://foss.heptapod.net/mercurial/hg-git), que a groso modo nos permiten transformar el proyecto Mercurial, que tenemos alojado en local, en un proyecto git para subirlo a GitHub. <br>
 Aquí tenemos unos articulos de referencia para quien quiera echarle un vistazo: <br>
-https://snapcraft.io/install/hg-git-fast-import/ubuntu <br>
-https://www.ryadel.com/en/using-github-with-mercurial-and-tortoisehg/ <br>
+<https://snapcraft.io/install/hg-git-fast-import/ubuntu> <br>
+<https://www.ryadel.com/en/using-github-with-mercurial-and-tortoisehg> <br>
  
 ## Conclusión
 A lo largo de esta página web hemos estado viendo como iniciarnos en el mundo de los sistemas de control de versiones. Más en detalle, en la facilidad de usar Mercurial en contraposición a Git. Mercurial lleva en desarrollo practicamente el mismo tiempo que Git y dispone de una gran cantidad de funcionalidades que nada envidian a Git.
@@ -241,15 +242,15 @@ Es verdad que con Mercurial no es suficiente para el correcto desarrollo. Pero p
 Esto último, ya te lo dejo a tu elección. Puedes utilizar cualquien sistema de control de versiones, el que mejor se adapte a ti o a tu negocio. Esta web solo busca dar la visivilidad que Mercurial se merece como herramienta.
 
 ## Bibliografía
-https://www.mercurial-scm.org/ <br>
-https://es.wikipedia.org/wiki/Mercurio_(elemento) <br>
-https://www.dlsi.ua.es/asignaturas/dca/teoria/t10.pdf <br>
-https://www.markdownguide.org/basic-syntax/ <br>
-https://es.wikipedia.org/wiki/Diff <br>
-https://www.mercurial-scm.org/downloads <br>
-https://www.mercurial-scm.org/wiki/Download <br>
-https://www.mercurial-scm.org/wiki/UsingExtensions <br>
-https://docs.github.com/es/github/authenticating-to-github/creating-a-personal-access-token <br>
-https://snapcraft.io/install/hg-git-fast-import/ubuntu <br>
-https://www.ryadel.com/en/using-github-with-mercurial-and-tortoisehg/ <br>
-https://foss.heptapod.net/mercurial/tortoisehg/thg/-/wikis/home
+<https://www.mercurial-scm.org> <br>
+<https://es.wikipedia.org/wiki/Mercurio_(elemento)> <br>
+<https://www.dlsi.ua.es/asignaturas/dca/teoria/t10.pdf> <br>
+<https://www.markdownguide.org/basic-syntax> <br>
+<https://es.wikipedia.org/wiki/Diff> <br>
+<https://www.mercurial-scm.org/downloads> <br>
+<https://www.mercurial-scm.org/wiki/Download> <br>
+<https://www.mercurial-scm.org/wiki/UsingExtensions> <br>
+<https://docs.github.com/es/github/authenticating-to-github/creating-a-personal-access-token> <br>
+<https://snapcraft.io/install/hg-git-fast-import/ubuntu> <br>
+<https://www.ryadel.com/en/using-github-with-mercurial-and-tortoisehg> <br>
+<https://foss.heptapod.net/mercurial/tortoisehg/thg/-/wikis/home>
