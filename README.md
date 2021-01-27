@@ -224,5 +224,29 @@ Cabe destacar, que después de haber probado las diferentes formas de crear un r
 
 En el uso diario, existen pocas diferencia entre estos servidores de código remoto "adaptados" a Mercurial y el visto en la asignatura, GitHub.
 
-## comentar hggit 
+**Extra:**
+Cabe mencionar que existen otras formas de usar Mercurial en local y GitHub en remoto. Existen herramientas como [TortoiseHG](https://tortoisehg.bitbucket.io/) o extensiones del propio mercurial como [hg-git](https://foss.heptapod.net/mercurial/hg-git), que a groso modo nos permiten transformar el proyecto Mercurial, que tenemos alojado en local, en un proyecto git para subirlo a GitHub. <br>
+Aquí tenemos unos articulos de referencia para quien quiera echarle un vistazo: <br>
+https://snapcraft.io/install/hg-git-fast-import/ubuntu <br>
+https://www.ryadel.com/en/using-github-with-mercurial-and-tortoisehg/ <br>
+ 
 ## Conclusión
+A lo largo de esta página web hemos estado viendo como iniciarnos en el mundo de los sistemas de control de versiones. Más en detalle, en la facilidad de usar Mercurial en contraposición a Git. Mercurial lleva en desarrollo practicamente el mismo tiempo que Git y dispone de una gran cantidad de funcionalidades que nada envidian a Git.
+De fácil uso y aprendizaje para el día a día. <br>
+Por otro lado, también hemos demostrado que es factible continuar o empezar el desarrollo de la práctica cuatro de la asignatura Metodologías Ágiles de Desarrollo de Software de la Universidad de Alicante impartida en este caso en el curso 2020-2021. Ya que todo lo que hemos ido necesitando durante el curso, Mercurial es capaz de solucionarlo. Pero aquí entramos en un dilema. <br>
+Es verdad que con Mercurial no es suficiente para el correcto desarrollo. Pero por contra, el uso de Git y Github está tan extendido y normalizado; que me he planteado a lo largo de la creación de la web que sí es necesario ir contra corriente. Sí el uso tan extendido del que gozan las herramientas llamdas git es por moda o en realidad se sostiene con argumentos de peso. <br>
+Esto último, ya te lo dejo a tu elección. Puedes utilizar cualquien sistema de control de versiones, el que mejor se adapte a ti o a tu negocio. Esta web solo busca dar la visivilidad que Mercurial se merece como herramienta.
+
+## Bibliografía
+https://www.mercurial-scm.org/ <br>
+https://es.wikipedia.org/wiki/Mercurio_(elemento) <br>
+https://www.dlsi.ua.es/asignaturas/dca/teoria/t10.pdf <br>
+https://www.markdownguide.org/basic-syntax/ <br>
+https://es.wikipedia.org/wiki/Diff <br>
+https://www.mercurial-scm.org/downloads <br>
+https://www.mercurial-scm.org/wiki/Download <br>
+https://www.mercurial-scm.org/wiki/UsingExtensions <br>
+https://docs.github.com/es/github/authenticating-to-github/creating-a-personal-access-token <br>
+https://snapcraft.io/install/hg-git-fast-import/ubuntu <br>
+https://www.ryadel.com/en/using-github-with-mercurial-and-tortoisehg/ <br>
+https://foss.heptapod.net/mercurial/tortoisehg/thg/-/wikis/home
