@@ -93,6 +93,23 @@ hg branches
 hg update nombre-de-la-rama
 ```
 
+**Otra directiva de Mercurial muy útil para el día a día es bisect:** <br>
+Presente también en git, no es más que una busqueda binaria entre los commits de nuestro proyecto.
+¿Qué conseguimos con esta herramienta? Detectar o buscar un posible error en un commit intermedio. 
+¿Cómo conseguimos utitlizar esta herramienta de forma correcta? Es muy sencillo su uso, unicamente debemos decirle a bisect que el commit en el que estamos ahora tiene un error.
+```
+hg bisect --reset
+hg bisect --bad
+```
+Acto seguido, nos vamos a un commit antiguo, uno que sepamos que funciona a la perfección o que no tiene ningún error.
+```
+hg update -r 23
+hg bisect --good 23
+```
+Una vez le indicamos ambos commits a bisect, nos cácula e indica cual es el commit intermedio y por tanto el siguiente a revisar.
+Una vez revisado este commit, tenemos tres opciones, o que sea justamente el commit del error, que sea un commit "bueno" o que siga existiendo el error pero no causado por el commit. Seguiremos usando bisect de la misma manera hasta dar con el fallo dentro del código. <br>
+Parece una trivialidad de herramienta. Pero cuando existen miles de commits dentro de un poryecto se vuelve una herramienta muy útil.
+
 
 **Mercurial admite el uso de [extensiones](https://www.mercurial-scm.org/wiki/UsingExtensions) para añadir diversas funcionalidades o mejoras:** <br>
 Podemos ver las extensiones disponibles con el siguinte commando:
@@ -104,8 +121,8 @@ hg help extensions
 hg help nombre-extension
 ```
 **Por último, podemos habilitar y deshabilitar las extensiones:** <br>
+Las extensiones se deben **habilitar**, p.e. en ```.hg/hgrc```:
 ```
-Las extensiones se deben **habilitar**, p.e. en .hg/hgrc:
 [extensions] 
 foo =
 # Podemos especificar la ruta concretan 
@@ -113,8 +130,8 @@ foo =
 myfeature = ~/.hgext/myfeature.pyb 
 ```
 
-```
 También se pueden **deshabilitar** de una en una: 
+```
 [extensions] 
 # disabling extension bar residing in /path/to/extension/bar.py 
 bar = !/path/to/extension/bar.py 
@@ -135,6 +152,23 @@ alias1 = URL1
 alias2 = URL2
 ```
 
+**Hacer efectivos los cambios locales de nuestro repositorio de forma remota:**
+Hasta ahora hemos estado trabajando de forma local. Siendo nosotros solos los desarrolladores del poryecto y guardando todo nuestro proyecto en nuestra máquina.
+Para subir los cambios generados disponemos, al igual que en git, de la directiva siguiente:
+```
+hg push
+```
+Conseguiremos guardar de forma remota nuestro proyecto, sí lo creamos localmente; como también los cambios que realicemos. <br>
+Más adelante veremos una plataforma similar a GitHub para tener nuestro repositorio remoto. Y como configurarlo todo. 
+
+**Descargar los cambios remotos a nuestro poryecto local:**
+Es la acción inversa a la vista arriba. Aquí descargaremos los cambios para igualar el proyecto y las posibles ramas, con el objetivo de tener siempre la última versión de los ficheros y mantener el poryecto actualizado. ¿Cómo logramos esto? Utilizando el comando siguiente como siempre:
+```
+hg pull
+'''
+Al igual que en git y github, debemos tener cuidado y usar dicho comando diariamente en nuestra rama principal. Al igual que si desarrollamos código en una rama que no es nuestra para que las líneas de código esten actualizadas. Con esta buena práctica, conseguiremos reducir al mínimo posibles errores en el desarrollo de código.
+
+
 **Los conflictos se marcan igual que en otros scv:**
 ```
 <<<<<<< /tmp/conflict/crab.cpp
@@ -143,10 +177,6 @@ void function() {
 int function() {
 >>>>>>> /tmp/crab.cpp
 ```
-
-explicar y añadir bisect
-falta push
-añadir enlaces 
 
 ## Nuestro proyecto con mercurial
 Vistos algunos de los comandos de los que disponemos al usar el proyecto Mercurial, vamos a ver como podemos aplicarlo a la práctica 4 de la asignatura.
@@ -191,6 +221,8 @@ Podemos comenzar a desarrollar trabajando con diferentes ramas como hemos visto 
 Mencionar que Heptapod, nos permite también crear grupos de trabajo como los vistos y usados en GitHub. De esta forma el repositorio se compartirá entre los miembros de dicho grupo. <br>
 
 Cabe destacar, que después de haber probado las diferentes formas de crear un repositorio en Heptapod, mi recomendación es la de crear un proyecto vacío y depués añadir los ficheros necesarios uno mismo. Ya que nos evitamos cantidad de permisos y burocracia entre las distintas plataformas. Ádemas, gozaremos de un control total sobre nuestro repositorio. Al contrario de hacerlo de la forma fácil y automatica. Buena para principiantes en el desarrollo de código o personas que no quieran entrar en detalles. <br>
+
+En el uso diario, existen pocas diferencia entre estos servidores de código remoto "adaptados" a Mercurial y el visto en la asignatura, GitHub.
 
 ## comentar hggit 
 ## Conclusión
