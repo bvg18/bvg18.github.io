@@ -184,12 +184,11 @@ int function() {
 ## Nuestro proyecto con mercurial
 Vistos algunos de los comandos de los que disponemos al usar el proyecto Mercurial, vamos a ver como podemos aplicarlo a la práctica cuatro de la asignatura. <br>
 Podemos realizar varias configuraciones distintas perfectamente válidas para el trabajado y el desarrollo diario. <br>
-La forma de trabajar que vamos a ver aquí es una totalmente distinta a la usada en la asignatura, ya aue no usaremos ni Git ni GitHub. <br>
+La forma de trabajar que vamos a ver aquí es una totalmente distinta a la usada en la asignatura, ya que no usaremos ni Git ni GitHub. <br>
 Al fin y al cabo es el objetivo de esta página web. <br>
 
 **¿Y cómo vamos a funcionar?** <br>
-Como hemos estado explicando, vamos a usar Mercurial como sistema de control de versiones. Pero de momento solo tenemos un proyecto local. <br>
-meter algo de codigo donde crea un priyecto y le añade los archivos de la practica cuatro. <br>
+Como hemos estado explicando, vamos a usar Mercurial como sistema de control de versiones. Pero de momento solo sabemos crear un proyecto local. <br>
 
 **¿Y cómo guardamos de forma remota nuestro repositorio?** <br>
 En la práctica hemos usado GitHub como servidor, en donde todos los componentes del grupo subiamos nuestra copia e ibamos guardando lo desarrollado.
