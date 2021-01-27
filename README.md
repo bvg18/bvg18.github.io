@@ -4,22 +4,22 @@ Metodologías Ágiles de Desarrollo de Software, Universidad de Alicante, curso 
 Página web creada por Brais Valencia García. Github Developer Student Pack y Namecheap.
 
 ## Mercurial
-El uso de git es casi unanime en el desarrollo de software, pero existen otras opciones igualmente validas como Baazar o Mercurial.
+El uso de git es casi unánime en el desarrollo de software, pero existen otras opciones igualmente validas como Baazar o Mercurial.
 Es el caso de este último sistema de control de versiones del que hablaremos en esta página web. Más concretamente su uso en relación 
 a la práctica 4, realizada de forma grupal, de la asignatura Metodologías de Desarrollo de Doftware de la Universidad de Alicante. <br>
 Pongámonos manos a la obra, aprendamos sobre el proyecto Mercurial y su potencial.
 
 ## Historia
-[Mercurial](https://www.mercurial-scm.org/) es un sistema de control de versiones distribuído. Su nombre le viene del termino 
+[Mercurial](https://www.mercurial-scm.org/) es un sistema de control de versiones distribuido. Su nombre le viene del termino 
 [Hidrargiro](https://es.wikipedia.org/wiki/Mercurio_(elemento)). Termino usado en la literatura antigua para designar al 
-Mercurio, elemento quimico con el símbolo Hg y número atómico 80. <br>
+Mercurio, elemento químico con el símbolo Hg y número atómico 80. <br>
 El creador y desarrollador principal de Mercurial es Matt Mackall, que hizo pública la existencia de Mercurial el 19 de abril de 2005.
 Con el objetivo de cubrir la necesidad existente de un sistema de control de versiones de software libre que sustituyera a la versión gratuita de BitKeeper.
 Ya que esta iba a ser retirada por sus creadores Bitmover. Se había estado usando BitKeeper debido a los requisitos de control de versiones del proyecto del núcleo Linux. Mackall decidió escribir Mercurial como sustituto para usarlo con el núcleo Linux. El proyecto comenzó aproximadamente al mismo tiempo que otro denominado git, iniciado por el propio Linus Torvalds con objetivos similares. El proyecto Linux decidió usar Git en lugar de Mercurial, y por ello el proyecto de Mackall se quedaría en un segundo plano.
 Siendo Git dueño y señor de los sistemas de control de versiones hasta la fecha, enero de 2021. <br>
 
-Por otro lado, el proyecto Mercurial estaba desarrolado usando el lenguaje de programación [Python](https://www.python.org/) como lenguaje principal. Pero también 
-hay partes, como la comparacion binaria de [diff](https://es.wikipedia.org/wiki/Diff) desarrolladas en C.<br>
+Por otro lado, el proyecto Mercurial estaba desarrollado usando el lenguaje de programación [Python](https://www.python.org/) como lenguaje principal. Pero también 
+hay partes, como la comparación binaria de [diff](https://es.wikipedia.org/wiki/Diff) desarrolladas en C.<br>
 Las principales metas del desarrollo de Mercurial incluyen un gran rendimiento y escalabilidad; desarrollo completamente distribuido, sin necesidad de un servidor; gestión robusta de archivos tanto de texto como binarios; y capacidades avanzadas de ramificación e integración, todo ello manteniendo sencillez conceptual.
 El código fuente de Mercurial se encuentra disponible bajo los términos de la licencia GNU GPL versión 2. <br>
 
@@ -31,7 +31,7 @@ de comandos o ejecutable.
 > [Mercurial para Mac OS X](https://www.mercurial-scm.org/downloads) <br>
 > [Mercurial para Linux](https://www.mercurial-scm.org/wiki/Download#Linux_.28.deb.29) <br>
 
-Para más detalles sobre la instalación o algun problema que pudiera surgir tenemos la [wiki de Mercurial](https://www.mercurial-scm.org/wiki/Download).
+Para más detalles sobre la instalación o algún problema que pudiera surgir tenemos la [wikipedia de Mercurial](https://www.mercurial-scm.org/wiki/Download).
 
 ## Configuración
 Toda la información relativa al control de versiones de un proyecto se guarda en el directorio raíz del proyecto, concretamente
@@ -43,7 +43,7 @@ Tendremos que comprobar si existe el archivo ".hgrc":
 - En Windows ``` $ ls .hgrc ```.
 - En Mac y Linux ``` $ ls ~/.hgrc```.
 
-Si no existe el archivo lo ponemos crear con ``` $ touch ~/.hgrc ```.
+Si no existe el archivo lo ponemos crear con ``` $ touch ~/.hgrc ```. <br>
 
 Por último, modificaremos el archivo ``` .hgrc ``` añadiendo un nombre de usuario y un correo electrónico. 
 ```
@@ -54,8 +54,8 @@ username = Emma Paris <eparis@atlassian.com>
 Guardamos el archivo y lo cerramos. Estaremos listos para empezar a usar Mercurial.
 
 ## Comandos básicos
-Vamos ahora a ver las instrucciones básicas de Mercurial. Así pues, la directiva de Mercurial es ```hg``` por el simbolo quimico antes mencionado.
-**Por tanto, podemos crear un repositorio local:**
+Vamos ahora a ver las instrucciones básicas de Mercurial. Así pues, la directiva de Mercurial es ```hg``` por el símbolo químico antes mencionado. <br>
+**Por tanto, podemos crear un repositorio local:** <br>
 ```
 hg init (directorio del proyecto)
 cd (directorio del proyecto)
@@ -67,7 +67,7 @@ hg add (ficheros nuevos)
 O también podemos añadir todos los ficheros nuevos a la vez con:
 hg add .
 ```
-**Una vez añadido los ficheros, podemos hacer el primer commit de nuestro repositorio:** 
+**Una vez añadido los ficheros, podemos hacer el primer commit de nuestro repositorio:** <br>
 Con el parametro -m podremos añadir un comentario al commit. Es una buena práctica siempre añadir uno o dos de estos en cada commit. <br>
 ```
 hg commit -m "Primer commit"
@@ -76,10 +76,10 @@ hg commit -m "Primer commit"
 ```
 hg status
 ```
-**El uso de ramas es algo fundamental dentro de los sistemas de control de versiones.**
-Por ello, hg dispone al igual que git de una serie de deirectivas para hacernos la vida más fácil a la hora de porgramas. Tanto de forma individual como en grupo.
-**Rama por defecto en Mercurial**
-Default es el nombre que tiene la rama que crea Mercurial al crear un proyecto desde cero.
+**El uso de ramas es algo fundamental dentro de los sistemas de control de versiones.** <br>
+Por ello, hg dispone al igual que git de una serie de directivas para hacernos la vida más fácil a la hora de programar. Tanto de forma individual como en grupo.<br>
+**Rama por defecto en Mercurial** <br>
+Default es el nombre que tiene la rama que crea Mercurial al crear un proyecto desde cero. <br>
 **Como podemos crear nuestras propias ramas:**
 ```
 hg branch nombre-de-la-rama
@@ -88,15 +88,15 @@ hg branch nombre-de-la-rama
 ```
 hg branches
 ```
-**Ádemas, si necesaitamos cambiar entre ramas podemos hacerlo con la directiva de hg:**
+**Ádemas, si necesitamos cambiar entre ramas podemos hacerlo con la directiva de hg:**
 ```
 hg update nombre-de-la-rama
 ```
 
 **Otra directiva de Mercurial muy útil para el día a día es bisect:** <br>
-Presente también en git, no es más que una busqueda binaria entre los commits de nuestro proyecto.
-¿Qué conseguimos con esta herramienta? Detectar o buscar un posible error en un commit intermedio. 
-¿Cómo conseguimos utitlizar esta herramienta de forma correcta? Es muy sencillo su uso, unicamente debemos decirle a bisect que el commit en el que estamos ahora tiene un error.
+Presente también en git, no es más que una busqueda binaria entre los commits de nuestro proyecto. <br>
+¿Qué conseguimos con esta herramienta? Detectar o buscar un posible error en un commit intermedio. <br>
+¿Cómo conseguimos utilizar esta herramienta de forma correcta? Es muy sencillo su uso, unicamente debemos decirle a bisect que el commit en el que estamos ahora tiene un error.
 ```
 hg bisect --reset
 hg bisect --bad
@@ -106,13 +106,13 @@ Acto seguido, nos vamos a un commit antiguo, uno que sepamos que funciona a la p
 hg update -r 23
 hg bisect --good 23
 ```
-Una vez le indicamos ambos commits a bisect, nos cácula e indica cual es el commit intermedio y por tanto el siguiente a revisar.
+Una vez le indicamos ambos commits a bisect, nos cálcula e indica cual es el commit intermedio y por tanto el siguiente a revisar.
 Una vez revisado este commit, tenemos tres opciones, o que sea justamente el commit del error, que sea un commit "bueno" o que siga existiendo el error pero no causado por el commit. Seguiremos usando bisect de la misma manera hasta dar con el fallo dentro del código. <br>
 Parece una trivialidad de herramienta. Pero cuando existen miles de commits dentro de un poryecto se vuelve una herramienta muy útil.
 
 
 **Mercurial admite el uso de [extensiones](https://www.mercurial-scm.org/wiki/UsingExtensions) para añadir diversas funcionalidades o mejoras:** <br>
-Podemos ver las extensiones disponibles con el siguinte commando:
+Podemos ver las extensiones disponibles con el siguiente commando:
 ```
 hg help extensions
 ```
@@ -165,7 +165,7 @@ Más adelante veremos una plataforma similar a GitHub para tener nuestro reposit
 Es la acción inversa a la vista arriba. Aquí descargaremos los cambios para igualar el proyecto y las posibles ramas, con el objetivo de tener siempre la última versión de los ficheros y mantener el poryecto actualizado. ¿Cómo logramos esto? Utilizando el comando siguiente como siempre:
 ```
 hg pull
-'''
+```
 Al igual que en git y github, debemos tener cuidado y usar dicho comando diariamente en nuestra rama principal. Al igual que si desarrollamos código en una rama que no es nuestra para que las líneas de código esten actualizadas. Con esta buena práctica, conseguiremos reducir al mínimo posibles errores en el desarrollo de código.
 
 
